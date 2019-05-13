@@ -1,0 +1,11 @@
+.root{
+    background-color: darkslateblue;
+}
+.logo {
+    width: 200px;
+    height: 200px;
+}
+.title{
+    color: #ffffff;
+    font-size: 25px;
+}

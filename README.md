@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 一、React脚手架
+##### 1、react脚手架说明
+- 1)xxx脚手架: 用来帮助程序员快速创建一个基于xxx库的模板项目
+```
+- a.包含了所有需要的配置
+- b.指定好了所有的依赖
+- c.可以直接安装/编译/运行一个简单效果
+```
+- 2)react提供了一个用于创建react项目的脚手架库: create-react-app
+- 3)项目的整体技术架构为:  react + webpack + es6 + eslint
+- 4)使用脚手架开发的项目的特点: 模块化, 组件化, 工程化
 
-## Available Scripts
+##### 2、使用命令
 
-In the project directory, you can run:
+```
+//设置安装全局
+npm install -g create-react-app
+//创建名称为hello-react的脚手架
+create-react-app hello-react
+//进入到项目的目录
+cd hello-react
+//运行项目
+npm start
+```
+##### 3、react脚手架项目结构
 
-### `npm start`
+```
+ReactNews
+	|--node_modules---第三方依赖模块文件夹
+	|--public
+		|-- index.html-----------------主页面
+	|--scripts
+		|-- build.js-------------------build打包引用配置
+	|-- start.js-------------------start运行引用配置
+	|--src------------源码文件夹
+		|--components-----------------react组件
+		|--index.js-------------------应用入口js
+	|--.gitignore------git版本管制忽略的配置
+	|--package.json----应用包配置文件 
+	|--README.md-------应用描述说明的readme文件
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### 4、WebStorm配置代码模板
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```
+import React, {Component} from 'react'
 
-### `npm test`
+export default class $className$ extends Component {
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    render() {
+        return(
+            <div>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+            </div>
+        )
+    }
+}
+```
