@@ -16,19 +16,28 @@ export default class App extends Component {
     // }
 
     //给组件对象指定state属性
-    state={
-        comments:[
-            {username: 'MiChong',content:"厉害了"},
-            {username: 'qjzxzxd',content:"6666"}
+    state = {
+        comments: [
+            {username: 'MiChong', content: "厉害了"},
+            {username: 'qjzxzxd', content: "6666"}
         ]
     }
 
-    addComment=(comment)=>{
+    //添加评论
+    addComment = (comment) => {
         const {comments} = this.state
         comments.unshift(comment)
         this.setState({comments})
     }
 
+    //删除指定评论
+    deleteComment=(index)=>{
+        const  {comments} = this.state
+        //删除指定元素
+        comments.splice(index,1)
+        //更新状态
+        this.setState({comments})
+    }
 
     render() {
 
@@ -47,7 +56,7 @@ export default class App extends Component {
                 </header>
                 <div className="container">
                     <CommentAdd addComment={this.addComment}/>
-                    <CommentList comments={comments}/>
+                    <CommentList comments={comments} deleteComment={this.deleteComment}/>
                 </div>
             </div>
         )
