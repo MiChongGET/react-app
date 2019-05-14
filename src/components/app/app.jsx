@@ -20,6 +20,9 @@ export default class App extends Component {
         comments: [
             {username: 'MiChong', content: "厉害了"},
             {username: 'qjzxzxd', content: "6666"}
+        ],
+        github:[
+
         ]
     }
 
