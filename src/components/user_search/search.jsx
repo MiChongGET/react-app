@@ -1,11 +1,7 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+import PubSub from 'pubsub-js'
 
 export default class Search extends Component {
-    static propTypes = {
-        setSearchName: PropTypes.func.isRequired
-    }
-
 
     search = () => {
         //得到输入的关键字
@@ -13,8 +9,12 @@ export default class Search extends Component {
         // const searchName = this.refs.searchName
         if (searchName) {
             //搜索
-            this.props.setSearchName(searchName)
+            // this.props.setSearchName(searchName)
+            //发布消息
+            PubSub.publish('searchName',searchName)
         }
+
+
     }
 
     render() {
